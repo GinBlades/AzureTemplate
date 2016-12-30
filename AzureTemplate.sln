@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{155D46AD-69DC-4981-A6B8-B8A954E3A1F6}"
 	ProjectSection(SolutionItems) = preProject
 		global.json = global.json
+		README.markdown = README.markdown
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AzureTemplate", "src\AzureTemplate\AzureTemplate.xproj", "{13FDDDCC-0E5B-4294-B4BE-C80ABDECA731}"

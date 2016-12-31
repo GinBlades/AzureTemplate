@@ -1,5 +1,19 @@
-﻿<li>
-    <a href="#">Register</a>
-</li><li>
-    <a href="#">Login</a>
-</li>
+﻿@using Microsoft.AspNetCore.Identity
+@using AzureTemplate.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+@if (SignInManager.IsSignedIn(User)) {
+    <li>
+        <a asp-controller="Account" asp-action="LogOff" data-delete data-return-url="@Url.Action("Index", "Home")">Log Off</a>
+    </li>
+} else {
+    <li>
+        <a asp-controller="Account" asp-action="Register">Register</a>
+    </li>
+    <li>
+        <a asp-controller="Account" asp-action="Login">Log In</a>
+    </li>
+}

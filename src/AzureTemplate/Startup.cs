@@ -7,6 +7,7 @@ using AzureTemplate.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using AzureTemplate.Models;
+using AzureTemplate.Services;
 
 namespace AzureTemplate {
     public class Startup {
@@ -34,6 +35,8 @@ namespace AzureTemplate {
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.AddSingleton<AssetFileHash>();
 
             services.AddMvc();
         }
